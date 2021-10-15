@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// preload youracclaim.com certificate iframes
+const script = document.createElement('script');
+  script.src = '//cdn.youracclaim.com/assets/utilities/embed.js';
+  script.async = false;
+  document.body.appendChild(script);
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { navbarItems } from './navbarItems';
 import { Link } from 'react-router-dom';
 import styles from './navbar.module.scss';
@@ -7,9 +7,22 @@ import DarkmodeSwitch from '../darkmode/darkmodeSwitch';
 
 const Navbar: React.FC = () => {
   const [navbarToggled, setNavbarToggled] = useState<boolean>(true);
+  const ref: React.MutableRefObject<any> = useRef(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (ref.current && !ref.current.contains(event.target)) {
+      setNavbarToggled(true);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true);
+    return () =>
+      document.removeEventListener('click', handleClickOutside, true);
+  })
 
   return (
-    <nav className={styles.container}>
+    <nav ref={ref} className={styles.container}>
       <Link to='/' className={styles.header} >
           <h1>
             Rints.in

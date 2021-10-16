@@ -16,7 +16,7 @@ const Description: React.FC<DescriptionProps> = () => {
         <p>
           <sup>Hello, Welcome to my portfolio page.</sup>
           <br/>
-          I am <b>Joni Rinta-Kahila</b>. I'm programming teacher at Vantaa.
+          I am <b>Joni Rinta-Kahila</b>. I'm programming teacher at Vantaa and I'm excited about programming and information security.
           <br/>
           Here you will find my CV and some of my projects.
         </p>

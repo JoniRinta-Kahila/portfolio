@@ -12,6 +12,7 @@ import Main from './components/sites/main';
 import Projects from './components/sites/projects';
 import Cv from './components/sites/cv';
 import Notfound from './components/sites/notfound';
+import MainFooter from './components/footer/mainFooter/mainFooter';
 
 const App: React.FC = () => {
   return (
@@ -28,7 +29,8 @@ const App: React.FC = () => {
           {/* Display main footer only on spesific sites */}
           <Route
             render={({ location }) => ['/', '/cv'].includes(location.pathname)
-              // footer component here
+              ? <MainFooter />
+              : null
             }
           />
         </Router>

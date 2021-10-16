@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
 
 interface IDarkmodeContext {
   darkmode: boolean,
@@ -24,6 +25,11 @@ const getDarkmodeInitial = (): boolean => {
 
 const DarkmodeContextProvider: React.FC = ({children}) => {
   const [darkmode, setDarkmode] = useState<boolean>(getDarkmodeInitial());
+
+  useEffect(() => {
+    document.body.style.backgroundColor = darkmode ? '#06090F' : '#fff';
+  }, [darkmode]);
+
   return (
     <DarkmodeContext.Provider value={{darkmode: darkmode, setDarkmode: setDarkmode}}>
       {children}

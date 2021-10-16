@@ -1,0 +1,48 @@
+@mixin default {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+
+  p {
+    margin: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    sup {
+      font-size: 24px;
+      text-decoration: underline rgb(122, 56, 56) solid
+    }
+  }
+
+  img {
+    user-select: none;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 100px;
+    margin-bottom: 30px;
+  }
+
+  hr {
+    border-top: 1px solid  rgba(54, 54, 54, 0.178);
+  }
+}
+
+.container {
+  @include default;
+}
+
+.container_dark {
+  @include default;
+  color: #DDD;
+  hr {
+    border-top: 1px solid rgba(126, 126, 126, 0.178);
+  }
+}
+
+

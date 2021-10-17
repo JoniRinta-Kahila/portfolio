@@ -9,18 +9,24 @@ const unityContent =
 
 const WebGLSection: React.FC = () => {
   const { darkmode } = useDarkmodeContext();
-  const { message } = useWebGLMessageContext();
+  const { message, setMesssage } = useWebGLMessageContext();
   const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => { // handle webGL on message
     console.info(message)
     if (!message) return;
+    
     unityContent.send(
       'JavaScriptHook',
       'PlayText',
       message,
     );
-  }, [message]);
+
+    // reset message for replay same message again
+    setTimeout(() => {
+      setMesssage('')
+    }, 2000)
+  }, [message, setMesssage]);
 
   useEffect(() => { // handle webGL theme switch
     if (loaded) return;

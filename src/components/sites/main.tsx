@@ -37,8 +37,9 @@ const Main: React.FC<MainProps> = () => {
                     width: '60px',
                     height: '40px',
                     borderRadius: '30px/20px',
-                    background: 'linear-gradient(90deg, rgba(119,111,255,1) 0%, rgba(151,88,152,1) 49%, rgba(99,255,0,1) 100%)',
+                    background: 'linear-gradient(69deg, rgba(203,48,102,1) 0%, rgba(22,191,253,1) 89%, rgba(0,255,51,1) 100%)',
                     border: '1px solid green',
+                    boxShadow: '1px 2px #ddd',
                     cursor: 'pointer'
                   }}
                 >
@@ -48,9 +49,9 @@ const Main: React.FC<MainProps> = () => {
         }
       </div>
       <WebGLSection />
-      {/* <div style={{height: '2000px'}}>
+      <div style={{height: '2000px'}}>
 
-      </div> */}
+      </div>
     </section>
   )
 }

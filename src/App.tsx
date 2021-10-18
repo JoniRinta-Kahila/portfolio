@@ -13,29 +13,32 @@ import Projects from './components/sites/projects';
 import Cv from './components/sites/cv';
 import Notfound from './components/sites/notfound';
 import MainFooter from './components/footer/mainFooter/mainFooter';
+import ScrollPositionContextProvider from './components/context/scrollPositionContextProvider';
 
 const App: React.FC = () => {
   return (
-    <DarkmodeContextProvider>
-      <WebGLMessageContextProvider>
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route exact path='/' component={Main} />
-            <Route exact path='/projects' component={Projects} />
-            <Route exact path='/cv' component={Cv} />
-            <Route component={Notfound} />
-          </Switch>
-          {/* Display main footer only on spesific sites */}
-          <Route
-            render={({ location }) => ['/', '/cv'].includes(location.pathname)
-              ? <MainFooter />
-              : null
-            }
-          />
-        </Router>
-      </WebGLMessageContextProvider>
-    </DarkmodeContextProvider>
+    <ScrollPositionContextProvider>
+      <DarkmodeContextProvider>
+        <WebGLMessageContextProvider>
+          <Router>
+            <Navbar />
+            <Switch>
+              <Route exact path='/' component={Main} />
+              <Route exact path='/projects' component={Projects} />
+              <Route exact path='/cv' component={Cv} />
+              <Route component={Notfound} />
+            </Switch>
+            {/* Display main footer only on spesific sites */}
+            <Route
+              render={({ location }) => ['/', '/cv'].includes(location.pathname)
+                ? <MainFooter />
+                : null
+              }
+            />
+          </Router>
+        </WebGLMessageContextProvider>
+      </DarkmodeContextProvider>
+    </ScrollPositionContextProvider>
   )
 }
 

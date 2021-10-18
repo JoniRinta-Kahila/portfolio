@@ -1,0 +1,21 @@
+.webglActions {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(119, 117, 117, 0.089);
+}
+
+.btnCode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  width: 60px;
+  height: 40px;
+  border-radius: 30px / 20px;
+  background: linear-gradient(69deg, rgba(203,48,102,1) 0%, rgba(22,191,253,1) 89%, rgba(0,255,51,1) 100%);
+  border: 1px solid green;
+  box-shadow: 1px 2px #ddd;
+  cursor: pointer;
+}

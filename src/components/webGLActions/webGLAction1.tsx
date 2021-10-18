@@ -1,15 +1,22 @@
 import React from 'react';
+import { useDarkmodeContext } from '../context/darkmodeContextProvider';
 import { useWebGLMessageContext } from '../context/webGLMessageContextProvider';
-import styles from './codeButton.module.scss';
+import styles from './webGLAction1.module.scss';
 
-type CodeButtonProps = {
+type WebGLAction1Props = {
 
 }
 
-const CodeButton: React.FC<CodeButtonProps> = () => {
+const WebGLAction1: React.FC<WebGLAction1Props> = () => {
+  const { darkmode } = useDarkmodeContext();
   const { setMesssage } = useWebGLMessageContext();
+
+  const handleClick = () => {
+    setMesssage('Hire me!');
+  }
+
   return (
-    <div className={styles.container}>
+    <div className={darkmode ? styles.container_dark : styles.container}>
       <div className={styles.editor}>
         <text className={styles.writer}>
           {'const createButton: React.FC = () => {'}<br/>
@@ -21,12 +28,11 @@ const CodeButton: React.FC<CodeButtonProps> = () => {
           {'};'}
         </text>
       </div>
-      <div className={styles.butt}>
-        <button onClick={() => setMesssage('Hire me!')}>Click me</button>
+      <div className={styles.program}>
+        <button onClick={handleClick}>Click me</button>
       </div>
-      <br/>
     </div>
   )
 }
 
-export default CodeButton;
+export default WebGLAction1

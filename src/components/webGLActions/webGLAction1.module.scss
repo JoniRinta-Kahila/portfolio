@@ -1,0 +1,115 @@
+@mixin default {
+  display: flex;
+  flex-direction: row;
+  min-height: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  // transform: scaleX(100%);
+  // animation: 3s fadeIn forwards;
+  animation-name: fadeIn;
+  animation-duration: .4s;
+  @media screen and (max-width: 439px) {
+    display: none;
+  }
+  .editor {
+    width: 50%;
+    max-width: 600px;
+    min-width: 320px;
+    padding: 3px 15px;
+    .writer {
+      font-family: monospace;
+      color:#0000;
+      background:
+        linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
+        linear-gradient(#00DFFC 0 0) 0 0;
+      background-size:calc(124*1ch) 200%;
+      -webkit-background-clip:padding-box,text;
+      background-clip:padding-box,text;
+      background-repeat:no-repeat;
+      animation: 
+        b .7s infinite steps(1),   
+        t calc(124*.2s) steps(124) forwards;
+    }
+  }
+  .program {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    max-width: 600px;
+    min-width: 80px;
+    height: 132px;
+    button {
+      animation: displayButton calc(128*.2s) steps(1);
+    }
+  }
+}
+
+.container {
+  @include default;
+  .editor {
+    border: 1px solid #000;
+    background: #00008B;
+  }
+  .program {
+    border: 1px solid #000;
+  }
+}
+
+.container_dark {
+  @include default;
+  .editor {
+    border: 1px solid #000;
+    background: #00008B;
+  }
+  .program {
+    border: 1px solid #000;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0%, 0%);
+  }
+  10% {
+    transform: scale(10%, 10%);
+  }
+  20% {
+    transform: scale(20%, 20%);
+  }
+  30% {
+    transform: scale(30%, 30%);
+  }
+  40% {
+    transform: scale(40%, 40%);
+  }
+  50% {
+    transform: scale(50%, 50%);
+  }
+  60% {
+    transform: scale(60%, 60%);
+  }
+  70% {
+    transform: scale(70%, 70%);
+  }
+  80% {
+    transform: scale(80%, 80%);
+  }
+  90% {
+    transform: scale(90%, 90%);
+  }
+  100% {
+    transform: scale(100%, 100%);
+  }
+}
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
+@keyframes displayButton {
+  from {visibility: hidden;}
+  to {visibility: visible;}
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Description from '../description/description';
 import WebGLSection from '../webGL/webGLSection';
 import styles from './main.module.scss';
@@ -19,6 +19,10 @@ const Main: React.FC = () => {
   const handleBeforePageChange = (number: number) => {
     console.log(number);
   };
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden"
+  })
 
   return (
     <div className={styles.container}>

@@ -28,7 +28,7 @@ export const techData: ITechData[] = [
   {
     key: 0,
     header: 'JavaScript, TypeScript',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti aliquid doloremque saepe impedit ratione exercitationem, dignissimos numquam totam nihil delectus?',
+    description: 'JavaScript || TypeScript is the programming language I use the most in my projects. I prefer to write with Typescript because the code becomes easier to read.',
     icons: [
       {
         key: 0,
@@ -47,7 +47,7 @@ export const techData: ITechData[] = [
   {
     key: 1,
     header: 'React, React Native',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti aliquid doloremque saepe impedit ratione exercitationem, dignissimos numquam totam nihil delectus?',
+    description: 'React, especially functional components with TypeScript are the best. I have several React projects, and this is one of them.',
     icons: [
       {
         key: 0,
@@ -109,7 +109,7 @@ export const techData: ITechData[] = [
     ],
   },
   {
-    key: 4,
+    key: 5,
     header: 'SASS',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti aliquid doloremque saepe impedit ratione exercitationem, dignissimos numquam totam nihil delectus?',
     icons: [

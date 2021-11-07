@@ -21,7 +21,13 @@ const App: React.FC = () => {
       <DarkmodeContextProvider>
         <WebGLMessageContextProvider>
           <Router>
-            <Navbar />
+            {/* Display Navbar only on spesific sites */}
+            <Route
+              render={({ location }) => ['/', '/cv'].includes(location.pathname)
+                ? <Navbar />
+                : null
+              }
+            />
             <Switch>
               <Route exact path='/' component={Main} />
               <Route exact path='/projects' component={Projects} />

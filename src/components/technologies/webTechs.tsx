@@ -3,6 +3,7 @@ import { useDarkmodeContext } from '../context/darkmodeContextProvider';
 import TechCard from './techCard';
 import { techData } from './techData';
 import styles from './webTechs.module.scss';
+import { ReactSmartScroller } from 'react-smart-scroller'
 
 type WebTechsProps = {
 
@@ -11,17 +12,20 @@ type WebTechsProps = {
 const WebTechs: React.FC<WebTechsProps> = () => {
   const { darkmode } = useDarkmodeContext();
   return (
-    <div className={darkmode ? styles.container_dark : styles.container}>
-      <h1>Knowledge of modern web-technologies.</h1>
-      <div className={styles.cards}>
+    <div className={!darkmode ? styles.container : styles.container_dark}>
+      <h1 className={styles.header}>Knowledge of modern web-technologies.</h1>
+      <ReactSmartScroller
+        draggable
+        style={{display:'flex', alignItems:'center', justifyContent:'center', overflowX:'auto', overflowY:'hidden', height:'240px'}}
+        >
         {
           techData.map(x => {
             return (
               <TechCard data={x} key={x.key} />
-            )
-          })
-        }
-      </div>
+              )
+            })
+          }
+      </ReactSmartScroller>
     </div>
   )
 }

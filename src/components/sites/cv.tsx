@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Certifications from '../certifications/certifications';
 import Education from '../experience/education/education';
 import Experience from '../experience/workExperience/experience';
 import styles from './cv.module.scss';
@@ -14,6 +15,7 @@ const Cv: React.FC<CvProps> = () => {
   return (
     <div className={styles.container}>
       <Education />
+      <Certifications />
       <Experience />
     </div>
   )

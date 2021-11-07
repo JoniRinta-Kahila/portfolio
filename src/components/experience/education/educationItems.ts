@@ -10,7 +10,7 @@ const EducationItems: IEducationItem[] = [
   {
     key: 0,
     title: 'Vocational Qualification in Information and Communication Technology',
-    description: '',
+    description: 'Modern web-technologies, Game developing, Cyber security.',
     perioid: '02/2020 - 8/2021',
     school: 'Vantaa Vocational College, Varia',
   },

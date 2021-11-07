@@ -1,0 +1,87 @@
+.container {
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  margin: 15px 5px;
+}
+
+.badgeLink {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.showcase {
+  border: 1px solid rgb(92, 0, 241);
+  border-radius: 2px;
+  width: 150px;
+  // height: 270px;
+  text-decoration: none;
+  user-select: none;
+  padding: 18px 0 0;
+  text-align: center;
+  cursor: pointer;
+  img{
+    margin: 0 0 18px;
+  }
+}
+
+.badgeName {
+  font-family: monospace;
+  color: #333;
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  margin: 0px 0px;
+  text-decoration: none;
+  overflow: hidden!important;
+  text-overflow: ellipsis;
+}
+
+.badgeIssuer {
+  color: #666;
+  font-size: .81rem;
+  font-style: italic;
+  line-height: 1.1rem;
+  margin: 0 0px;
+  max-width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.badgeProvider {
+  display: block;
+  // text-align: center;
+  // position: absolute;
+  height: 30px;
+  // bottom: 0;
+  background:rgb(92, 0, 241);
+  margin-top: 8px;
+  // left:17%;
+  // width: 149px;
+  // transform: translate(1110px 1110px);
+  p {
+    text-decoration: none;
+    color: #b6b6b6;
+    text-transform: uppercase;
+    font-size: .55rem;
+    margin: auto;
+    margin-top: 8px;
+    display: inline-block;
+    width: auto;
+  }
+  img {
+    float: right;
+  }
+}

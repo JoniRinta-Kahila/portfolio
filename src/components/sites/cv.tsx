@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import Education from '../education/education';
+import Education from '../experience/education/education';
+import Experience from '../experience/workExperience/experience';
 import styles from './cv.module.scss';
 
 type CvProps = {
@@ -13,6 +14,7 @@ const Cv: React.FC<CvProps> = () => {
   return (
     <div className={styles.container}>
       <Education />
+      <Experience />
     </div>
   )
 }

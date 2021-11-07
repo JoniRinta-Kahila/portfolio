@@ -22,7 +22,7 @@
   }
 }
 
-.eduGroup {
+.group {
   max-width: 800px;
   margin: auto;
   @media screen and (max-width: 750px) {
@@ -36,6 +36,12 @@
   margin-bottom: 50px;
   text-transform: uppercase;
   color: #000;
+  @media screen and (max-width: 750px) {
+    margin: 0;
+    h2 {
+      margin: 0;
+    }
+  }
 }
 
 .centerText {

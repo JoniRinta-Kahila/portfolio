@@ -4,7 +4,7 @@ import WebGLSection from '../webGL/webGLSection';
 import styles from './main.module.scss';
 import WebTechs from '../technologies/webTechs';
 import WebGLAction1 from '../webGLActions/webGLAction1';
-import ReactPageScroller from 'rintsin-react-page-scroller';
+import ReactPageScroller from 'react-page-scroller';
 
 // https://github.com/markcellus/scroll-js
 

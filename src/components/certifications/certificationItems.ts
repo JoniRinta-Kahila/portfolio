@@ -1,4 +1,5 @@
 export interface ICertificationItem {
+  key: number;
   title: string;
   issuer: string;
   url: string;
@@ -11,6 +12,7 @@ export interface ICertificationItem {
 
 const CertificationItems: ICertificationItem[] = [
   {
+    key: 1,
     title: 'Introduction to Cybersecurity',
     issuer: 'Cisco',
     url: 'https://www.youracclaim.com/badges/a9352d90-6cb9-41c8-8ea3-9170093b55f2/embedded',
@@ -23,6 +25,7 @@ const CertificationItems: ICertificationItem[] = [
 
   },
   {
+    key: 0,
     title: 'Cybersecurity Essentials',
     issuer: 'Cisco',
     url: 'https://www.youracclaim.com/badges/a100876c-e886-4c85-8502-f7dfe5e039bc/embedded',
